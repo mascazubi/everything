@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life, the Universe, and Everything</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Life, the Universe, and Everything...</h1>
+    </header>
+    <div class="star-layers">
+        <div class="star-layer" id="stars"></div>
+        <div class="star-layer" id="stars2"></div>
+        <div class="star-layer" id="stars3"></div>
+    </div>
+    <div class="main-wrapper">
+        <main>
+            <div class="axis-wrapper y left">
+                <div class="axis-title y left log-mo">
+                    <p>log(M<sub>⊙</sub>)</p>
+                </div>
+                <div class="axis log-mo y left">
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="30"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="20"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="10"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="0"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-10"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-20"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-30"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-40"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-50"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-60"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-70"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-80"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                </div>
+            </div>
+            <div class="axis-wrapper y left">
+                <div class="axis-title y left">
+                    <p>log(mass) [g]</p>
+                </div>
+                <div class="axis log-mass-g y left">
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="60"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="50"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="40"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="30"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="20"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="10"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="0"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-10"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-20"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-30"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-40"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-50"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                </div>
+            </div>
+            <div class="chart column">
+                <div class="axis-wrapper x top">
+                    <div class="axis-title x top">
+                        <p>log (radius) [Mpc]</p>
+                    </div>
+                    <div class="axis log-rad x top">
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-60"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-50"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-40"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-30"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-20"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-10"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="0"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="10"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="20"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="30"></div>
+                    </div>
+                </div>
+                <div class="chart-mid row">
+                    <div class="chart-area">
+                        <!-- shapes -->
+                        <svg  class="shape" viewBox="0 0 100 100" preserveAspectRatio="none" width="100" height="100">
+                            
+                            <polygon id="bigboi" points="7,60 40.5,84.7 73,8.9"></polygon>                            <polygon id="forbidden" points="0,0 0,65.5 85,0"></polygon>
+                            <polygon id="sub-plank" points="0,0 0,54 7.5,59.7 7.3,0"></polygon>
+                            <polygon id="quantum" points="0,100 0,54 60,100"></polygon>
+                            <polygon id="atoms" points="34,74 35,74 34,76.5 33,76.5"></polygon>
+
+                            <line id="ip-line" class="line" x1="7.3%" y1="100%" x2="7.3%" y2="0%"></line>
+                            <line id="ep-line" class="line dashed" x1="0" y1="59.6" x2="100%" y2="59.6"></line>
+                            <line id="plank" class="line dashed" x1="7.5%" y1="59%" x2="33.5%" y2="0%"></line>
+                            <line id="gut" class="line dashed" x1="12.5%" y1="63%" x2="39.5%" y2="0%"></line>
+                            <line id="ew" class="line dashed" x1="25.5%" y1="73.5%" x2="56.5%" y2="0%"></line>
+                            <line id="nuclear" class="line dashed" x1="29%" y1="76%" x2="61%" y2="0%"></line>
+                            <line id="atomic" class="line dashed" x1="33%" y1="79%" x2="66%" y2="0%"></line>
+                            <line id="recomb" class="line dashed" x1="38.5%" y1="83.5%" x2="73.5%" y2="0%"></line>
+                            <line id="now" class="line" x1="40.4%" y1="85%" x2="76.5%" y2="0%"></line>
+                            <line id="compton" class="line" x1="7.5%" y1="59.6%" x2="60%" y2="100%"></line>
+                            <line id="black-holes" class="line" x1="7.5%" y1="59.6%" x2="85%" y2="0%"></line>
+
+                            <polygon id="qg" points="0,65.5 0,54 7.5,59.7"></polygon>
+                        </svg>
+                        <!-- circles -->
+                        <svg id="instanton" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="20px"></circle>
+                        </svg>
+                        <svg id="sopbh" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        <svg id="threekbh" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        <svg id="hubble" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="30px"></circle>
+                        </svg>
+                        <svg id="human" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        <svg id="whale" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        <svg id="flea" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        <svg id="bacterium" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        <svg id="covid" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
+                            <circle cx="50%" cy="50%" r="15px"></circle>
+                        </svg>
+                        
+                        <!-- labels -->
+                        <span id="qg-label" class="shape-label light-label">QG</span>
+                        <span id="sub-plank-label" class="shape-label dark-label">sub—Planckian unknown</span>
+                        <span id="forbidden-label" class="shape-label dark-label">forbidden <br>by gravity</span>
+                        <span id="quantum-label" class="shape-label dark-label">quantum <br>uncertainty</span>
+                        <span id="black-holes-label" class="shape-label dark-label">black holes</span>
+                        <span id="compton-label" class="shape-label dark-label">Compton limit</span>
+                        <span id="plank-label" class="shape-label dark-label">Plank 10<sup>-43</sup>s</span>
+                        <span id="gut-label" class="shape-label dark-label">GUT 10<sup>-32</sup>s</span>
+                        <span id="ew-label" class="shape-label dark-label">EW 10<sup>-11</sup>s</span>
+                        <span id="nuclear-label" class="shape-label dark-label">nuclear 10<sup>-6</sup>s</span>
+                        <span id="atomic-label" class="shape-label dark-label">atomic 10<sup>3</sup>s</span>
+                        <span id="recomb-label" class="shape-label dark-label">recomb 10<sup>13</sup>s</span>
+                        <span id="now-label" class="shape-label dark-label">now</span>
+                        <span id="instanton-label" class="shape-label dark-label">instanton</span>
+                        <span id="sopbh-label" class="shape-label dark-label">smallest observable PBH</span>
+                        <span id="threekbh-label" class="shape-label dark-label">3K BH</span>
+                        <span id="hubble-label" class="shape-label dark-label">Hubble radius</span>
+                        <span id="human-label" class="shape-label dark-label">You</span>
+                        <span id="whale-label" class="shape-label dark-label">Whale</span>
+                        <span id="flea-label" class="shape-label dark-label">Flea</span>
+                        <span id="bacterium-label" class="shape-label dark-label">bacterium</span>
+                        <span id="covid-label" class="shape-label dark-label">COVID virus</span>
+                        <span id="atoms-label" class="shape-label dark-label">atoms</span>
+        
+                        <!-- legend -->
+                        <div class="domination">
+                            <h2 class="title">Domination</h2>
+                            <div class="cat">
+                                <div class="label-color a"></div><span class="label">Ω<sub>Λ<sub>i</sub></sub></span>
+                            </div>
+                            <div class="cat">
+                                <div class="label-color b"></div><span class="label">Ω<sub>r</sub></span>
+                            </div>
+                            <div class="cat">
+                                <div class="label-color c"></div><span class="label">Ω<sub>m</sub></span>
+                            </div>
+                            <div class="cat">
+                                <div class="label-color d"></div><span class="label">Ω<sub>Λ</sub></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="axis-wrapper x bottom">
+                    <div class="axis-title x bottom">
+                        <p>log (physical radius) [cm]</p>
+                    </div>
+                    <div class="axis log-phy x bottom">
+                        <div class="major" data-value="-40"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-30"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-20"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="-10"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="0"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="10"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="20"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="30"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="40"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                        <div class="major" data-value="50"></div>
+                        <div class="minor"></div>
+                        <div class="minor"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="axis-wrapper y right">
+                <div class="axis-title y right">
+                    <p>log(mass) [GeV]</p>
+                </div>
+                <div class="axis log-mass-gev y right">
+                    <div class="minor"></div>
+                    <div class="major" data-value="90"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="80"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="70"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="60"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="50"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="40"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="30"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="20"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="10"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="0"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-10"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="major" data-value="-20"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                    <div class="minor"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="drawer">
+            <input type="checkbox" id="drawer-toggle" hidden>
+            <label for="drawer-toggle" class="drawer-handle">
+                <p class="info">
+                    Info
+                </p>
+            </label>
+        </div>
+        <p>Adapted from <b>Fig. 2 "Plot of All Objects"</b> in Lineweaver, C. H. and Patel, V. M., “All objects and some questions”, <i>American Journal of Physics</i>, vol. 91, no. 10, AIP, pp. 819–825, 2023. <a href="https://ui.adsabs.harvard.edu/link_gateway/2023AmJPh..91j.819L/doi:10.1119/5.0150209">doi:10.1119/5.0150209</a>.</p>
+    </footer>
+</body>
+</html>
