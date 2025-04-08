@@ -73,24 +73,26 @@ a{
     display: flex;
     justify-content: start;
     padding-bottom: 0.75rem;
-
+    align-items: start;
 }
 main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 115rem;
+    aspect-ratio: 16 / 9;
     margin-inline: auto;
     margin-block: 4rem;
     align-items: stretch;
+    width: 102vh;
+    min-width: 70rem;
 }
 /* chart - axis adapted from ArturArsalanov's ruler */
 
 .chart.column {
     display: flex;
     flex-direction: column;
-    width: 60vw;
-    min-width: 62rem;
+    width: 100%;
+    height: 100%;
 }
 .chart-area {
     position: relative;
@@ -98,8 +100,9 @@ main {
     /* height: 55vh;
     min-height: 600px; */
     width: 100%;
-    aspect-ratio: 16/9;
+    height: 100%;
     border: 2px solid var(--text-color);
+    --transition-speed: 0.5s;
 }
 .axis.x {
     position: relative;
@@ -194,7 +197,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 35rem;
 }
 .axis.y.left {
     align-items: end;
@@ -231,6 +233,10 @@ main {
     margin-block: 0;
     height: 100%;
 }
+.chart-mid.row {
+    height: calc(100% + 2 * var(--axis-width));
+    width: 100%;
+}
 /* inside the chart */
 .shape {
     position: absolute;
@@ -240,6 +246,11 @@ main {
     --line-color: var(--background-color);
     --dash-array: 1 0.5;
     --stroke-width: 0.25;
+}
+.chart-area .shape *,
+.chart-area svg *,
+.chart-area .shape-label {
+    transition: color var(--transition-speed), background-color var(--transition-speed), stroke var(--transition-speed), fill var(--transition-speed);
 }
 .circle {
     position: absolute;
@@ -317,6 +328,10 @@ body:has(#forbidden-label:hover) #forbidden {
     font-weight: bolder;
     background-color: var(--shape-hover-color);
 }
+/* body:has([id*='forbidden']:hover) .chart-area > svg *:not(#forbidden),
+body:has([id*='forbidden']:hover) .chart-area > span:not([id*='forbidden']) {
+    filter: opacity(0.5);
+} */
 #quantum {
     fill: rgba(255, 72, 0, 0.4);
 }
@@ -342,8 +357,8 @@ body:has(#quantum-label:hover) #quantum {
     --stroke-width: 0.45;
 }
 #black-holes-label {
-    top: 52%;
-    left: 8%;
+    bottom: 44%;
+    left: 9.3%;
     transform: rotate(-23deg);
     font-size: 1.8rem;
     text-align: center;
@@ -363,7 +378,7 @@ body:has(#black-holes-label:hover) #black-holes {
     --stroke-width: 0.5;
 }
 #compton-label {
-    top: 67%;
+    top: 68%;
     left: 17%;
     transform: rotate(23deg);
     font-size: 1.6rem;
@@ -558,6 +573,9 @@ body:has(#instanton-label:hover) #instanton circle {
     font-weight: bolder;
     background-color: var(--shape-hover-color);
 }
+body:has(#instanton-label:hover) .bang {
+    transform: scale(10);
+}
 #sopbh {
     fill: var(--background-color);
     stroke: transparent;
@@ -591,8 +609,8 @@ body:has(#sopbh-label:hover) #sopbh circle {
     left: 37.6%;
 }
 #threekbh-label {
-    top: 32%;
-    left: 33%;
+    top: 36%;
+    left: 38%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -827,11 +845,13 @@ footer {
     margin-inline: auto;
     padding-inline: 1rem;
     margin-top: 1rem;
+    text-align: left;
 
     & p {
         font-size: 90%;
-        max-width: 80ch;
-        text-align: justify;
+        max-width: 100ch;
+        text-align: left;
+        line-height: 1.4;
     }
 }
 .drawer {
@@ -855,6 +875,10 @@ footer {
 
         & svg {
             margin-inline: auto;
+            transform: rotate(0deg);
+            transition: transform 0.3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+            stroke: var(--primary-color);
+            stroke-width: 2px;
         }
     }
     .info {
@@ -862,26 +886,27 @@ footer {
         font-weight: bold;
     }
     footer {
-        transform: translateY(69%);
+        transform: translateY(80%);
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: #242931;
+        background-color: #37465461;
         padding-inline: 1rem;
         padding-block: 1rem 2rem;
         border-top-left-radius: 14px;
         border-top-right-radius: 14px;
         box-shadow: 0 0 14px 7px #0000004f;
-        transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        transition: transform 0.3s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+        backdrop-filter: blur(24px);
     }
-
     body:has(#drawer-toggle:checked) footer {
         transform: translateY(0%);
     }
 
-    #drawer-toggle:checked .chevron {
-        transform: rotate(90deg);
+    #drawer-toggle:checked ~ .drawer-handle .chevron {
+        transform: rotate(180deg);
+        stroke: currentColor;
     }
 
     body {
