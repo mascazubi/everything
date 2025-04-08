@@ -81,10 +81,10 @@ main {
     justify-content: center;
     aspect-ratio: 16 / 9;
     margin-inline: auto;
-    margin-block: 4rem;
+    margin-block: 4rem 6rem;
     align-items: stretch;
     width: 102vh;
-    min-width: 70rem;
+    min-width: 66rem;
 }
 /* chart - axis adapted from ArturArsalanov's ruler */
 
@@ -850,7 +850,8 @@ footer {
     & p {
         font-size: 90%;
         max-width: 100ch;
-        text-align: left;
+        text-align: justify;
+        word-spacing: -6px;
         line-height: 1.4;
     }
 }
