@@ -340,7 +340,7 @@ body:has([id*='forbidden']:hover) .chart-area > span:not([id*='forbidden']) {
 }
 #quantum-label {
     top: 68%;
-    left: 8%;
+    left: 6%;
     transform: rotate(29deg);
     font-size: 2.3rem;
     text-align: center;
@@ -679,7 +679,6 @@ body:has(#hubble-label:hover) #hubble circle {
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
-    text-decoration: underline;
 }
 #human circle:hover,
 #human-label:hover,
@@ -810,7 +809,7 @@ body:has(#atoms-label:hover) #atoms {
     background-color: var(--shape-hover-color);
 }
 #moonsdp {
-    fill: rgba(0, 0, 0, 0.5);
+    fill: rgba(0, 205, 55, 0.5);
     stroke: transparent;
     stroke-width: 0.75;
 }
@@ -825,6 +824,94 @@ body:has(#atoms-label:hover) #atoms {
 #moonsdp-label:hover,
 body:has(#moonsdp:hover) #moonsdp-label,
 body:has(#moonsdp-label:hover) #moonsdp {
+    stroke: var(--shape-hover-color);
+    fill: white;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#planets {
+    fill: rgba(82, 0, 224, 0.5);
+    stroke: transparent;
+    stroke-width: 0.75;
+}
+#planets-label {
+    top: 31%;
+    left: 53.75%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#planets:hover,
+#planets-label:hover,
+body:has(#planets:hover) #planets-label,
+body:has(#planets-label:hover) #planets  {
+    stroke: var(--shape-hover-color);
+    fill: white;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#mss {
+    fill: rgba(0, 97, 224, 0.5);
+    stroke: transparent;
+    stroke-width: 0.75;
+}
+#mss-label {
+    top: 27%;
+    left: 55.75%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#mss:hover,
+#mss-label:hover,
+body:has(#mss:hover) #mss-label,
+body:has(#mss-label:hover) #mss  {
+    stroke: var(--shape-hover-color);
+    fill: white;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#galaxies {
+    fill: rgba(0, 224, 153, 0.5);
+    stroke: transparent;
+    stroke-width: 0.75;
+}
+#galaxies-label {
+    top: 20%;
+    left: 67.75%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#galaxies:hover,
+#galaxies-label:hover,
+body:has(#galaxies:hover) #galaxies-label,
+body:has(#galaxies-label:hover) #galaxies  {
+    stroke: var(--shape-hover-color);
+    fill: white;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#redg {
+    fill: rgba(0, 97, 224, 0.5);
+    stroke: transparent;
+    stroke-width: 0.75;
+}
+#redg-label {
+    top: 27%;
+    left: 55.75%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#redg:hover,
+#redg-label:hover,
+body:has(#redg:hover) #redg-label,
+body:has(#redg-label:hover) #redg  {
     stroke: var(--shape-hover-color);
     fill: white;
     color: white;
@@ -961,10 +1048,10 @@ html {
     background: radial-gradient(ellipse at bottom, #17212d 0%, #090a0f 100%);
     overflow: hidden;
 }
-.star-layers {
+/* .star-layers {
     position: absolute;
 }
-/* #stars {
+#stars {
     width: 1px;
     height: 1px;
     background: transparent;
