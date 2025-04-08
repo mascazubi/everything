@@ -83,7 +83,7 @@ main {
     margin-inline: auto;
     margin-block: 4rem 6rem;
     align-items: stretch;
-    width: 102vh;
+    width: 110vh;
     min-width: 66rem;
 }
 /* chart - axis adapted from ArturArsalanov's ruler */
@@ -250,7 +250,8 @@ main {
 .chart-area .shape *,
 .chart-area svg *,
 .chart-area .shape-label {
-    transition: color var(--transition-speed), background-color var(--transition-speed), stroke var(--transition-speed), fill var(--transition-speed);
+    --transition-delay: 0s;
+    transition: color var(--transition-speed), background-color var(--transition-speed) cubic-bezier(0, 1.3, 0.36, 1) var(--transition-delay), stroke var(--transition-speed), fill var(--transition-speed);
 }
 .circle {
     position: absolute;
@@ -286,7 +287,7 @@ main {
 }
 #sub-plank-label {
     top: 55%;
-    left: 3.5%;
+    left: 2.5%;
     transform: rotate(-90deg);
     font-size: 1.4rem;
 }
@@ -294,6 +295,7 @@ main {
 #sub-plank-label:hover,
 body:has(#sub-plank:hover) #sub-plank-label,
 body:has(#sub-plank-label:hover) #sub-plank {
+    --transition-delay: 0.3s;
     fill: var(--shape-hover-color);
     color: white;
     font-weight: bolder;
@@ -316,13 +318,14 @@ body:has(#sub-plank-label:hover) #sub-plank {
 #forbidden-label {
     top: 31%;
     left: 12%;
-    transform: rotate(-23deg);
+    transform: rotate(-29deg);
     font-size: 2.5rem;
 }
 #forbidden:hover,
 #forbidden-label:hover,
 body:has(#forbidden:hover) #forbidden-label,
 body:has(#forbidden-label:hover) #forbidden {
+    --transition-delay: 0.3s;
     fill: var(--shape-hover-color);
     color: white;
     font-weight: bolder;
@@ -338,7 +341,7 @@ body:has([id*='forbidden']:hover) .chart-area > span:not([id*='forbidden']) {
 #quantum-label {
     top: 68%;
     left: 8%;
-    transform: rotate(23deg);
+    transform: rotate(29deg);
     font-size: 2.3rem;
     text-align: center;
 }
@@ -346,6 +349,7 @@ body:has([id*='forbidden']:hover) .chart-area > span:not([id*='forbidden']) {
 #quantum-label:hover,
 body:has(#quantum:hover) #quantum-label,
 body:has(#quantum-label:hover) #quantum {
+    --transition-delay: 0.3s;
     fill: var(--shape-hover-color);
     color: white;
     font-weight: bolder;
@@ -359,9 +363,16 @@ body:has(#quantum-label:hover) #quantum {
 #black-holes-label {
     bottom: 44%;
     left: 9.3%;
-    transform: rotate(-23deg);
+    transform: rotate(-28deg);
     font-size: 1.8rem;
     text-align: center;
+}
+
+@media screen and (max-width: 1278px) {
+    #black-holes-label {
+        transform: rotate(-29.5deg);
+    }
+    
 }
 #black-holes:hover,
 #black-holes-label:hover,
@@ -380,9 +391,15 @@ body:has(#black-holes-label:hover) #black-holes {
 #compton-label {
     top: 68%;
     left: 17%;
-    transform: rotate(23deg);
+    transform: rotate(28deg);
     font-size: 1.6rem;
     text-align: center;
+}
+@media screen and (max-width: 1278px) {
+    #compton-label {
+        transform: rotate(29.5deg);
+    }
+    
 }
 #compton:hover,
 #compton-label:hover,
@@ -407,7 +424,7 @@ body:has(#compton-label:hover) #compton {
 #plank-label {
     top: 19%;
     left: 21%;
-    transform: rotate(-52deg);
+    transform: rotate(-58deg);
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -428,7 +445,7 @@ body:has(#plank-label:hover) #plank {
 #gut-label {
     top: 16%;
     left: 28.5%;
-    transform: rotate(-52deg);
+    transform: rotate(-58deg);
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -448,8 +465,8 @@ body:has(#gut-label:hover) #gut {
 }
 #ew-label {
     top: 14.5%;
-    left: 46.5%;
-    transform: rotate(-53deg);
+    left: 46%;
+    transform: rotate(-59deg);
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -469,8 +486,8 @@ body:has(#ew-label:hover) #ew {
 }
 #nuclear-label {
     top: 21.5%;
-    left: 48%;
-    transform: rotate(-53deg);
+    left: 47.5%;
+    transform: rotate(-59deg);
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -490,8 +507,8 @@ body:has(#nuclear-label:hover) #nuclear {
 }
 #atomic-label {
     top: 18.5%;
-    left: 54.5%;
-    transform: rotate(-53deg);
+    left: 54%;
+    transform: rotate(-59deg);
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -511,8 +528,8 @@ body:has(#atomic-label:hover) #atomic {
 }
 #recomb-label {
     top: 19.5%;
-    left: 61.5%;
-    transform: rotate(-53deg);
+    left: 60.75%;
+    transform: rotate(-59deg);
     font-size: 1.2rem;
     text-align: center;
     color: white;
@@ -533,8 +550,8 @@ body:has(#recomb-label:hover) #recomb {
 }
 #now-label {
     top: 5.5%;
-    left: 70.8%;
-    transform: rotate(-52deg);
+    left: 70.4%;
+    transform: rotate(-58deg);
     font-size: 1.2rem;
     text-align: center;
     color: black;
@@ -786,6 +803,28 @@ body:has(#covid-label:hover) #covid circle {
 #atoms-label:hover,
 body:has(#atoms:hover) #atoms-label,
 body:has(#atoms-label:hover) #atoms {
+    stroke: var(--shape-hover-color);
+    fill: white;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#moonsdp {
+    fill: rgba(0, 0, 0, 0.5);
+    stroke: transparent;
+    stroke-width: 0.75;
+}
+#moonsdp-label {
+    top: 41%;
+    left: 49.5%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#moonsdp:hover,
+#moonsdp-label:hover,
+body:has(#moonsdp:hover) #moonsdp-label,
+body:has(#moonsdp-label:hover) #moonsdp {
     stroke: var(--shape-hover-color);
     fill: white;
     color: white;
