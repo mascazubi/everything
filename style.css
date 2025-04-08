@@ -561,7 +561,7 @@ body:has(#recomb-label:hover) #recomb {
 body:has(#now:hover) #now-label,
 body:has(#now-label:hover) #now {
     stroke: var(--shape-hover-color);
-    stroke-width: .35;
+    stroke-width: .6;
     color: white;
     font-weight: bolder;
     background-color: var(--shape-hover-color);
