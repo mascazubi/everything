@@ -321,12 +321,15 @@ body:has(#sub-plank-label:hover) #sub-plank {
 #oai {
     fill: rgb(127, 127, 127);
 }
+#om {
+    fill: rgb(117, 153, 255);
+}
 #qgp {
     fill: rgba(255, 255, 255, 0.4);
 }
 #qgp-label {
     top: 65.5%;
-    left: 30.5%;
+    left: 30.25%;
     transform: rotate(-67deg);
     font-size: 1rem;
     text-align: center;
@@ -884,7 +887,7 @@ body:has(#planets-label:hover) #planets  {
 }
 #earth-label {
     top: 32.5%;
-    left: 52.5%;
+    left: 53%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -1007,7 +1010,7 @@ body:has(#redg-label:hover) #redg  {
     background-color: #ff9046;
 }
 .label-color.c {
-    background-color: #ff9046;
+    background-color: rgb(117, 153, 255);
 }
 .label-color.d {
     background-color: var(--secondary-color);
