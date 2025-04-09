@@ -81,7 +81,7 @@ main {
     justify-content: center;
     aspect-ratio: 16 / 9;
     margin-inline: auto;
-    margin-block: 4rem 6rem;
+    margin-block: 4rem;
     align-items: stretch;
     width: 110vh;
     min-width: 66rem;
@@ -311,6 +311,31 @@ body:has(#sub-plank-label:hover) #sub-plank {
 }
 #bigboi {
     fill: rgb(255 72 0 / 27%);
+}
+#oai {
+    fill: rgb(127, 127, 127);
+}
+#qgp {
+    fill: rgba(255, 255, 255, 0.4);
+}
+#qgp-label {
+    top: 65.5%;
+    left: 30%;
+    transform: rotate(-59deg);
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+    padding: .125rem;
+}
+#qgp:hover,
+#qgp-label:hover,
+body:has(#qgp:hover) #qgp-label,
+body:has(#qgp-label:hover) #qgp {
+    --transition-delay: 0.3s;
+    fill: var(--shape-hover-color);
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
 }
 #forbidden {
     fill: rgba(255, 72, 0, 0.4);
@@ -952,7 +977,7 @@ body:has(#redg-label:hover) #redg  {
     line-height: 1.2;
 }
 .label-color.a {
-    background-color: #ff9046;
+    background-color: rgb(127, 127, 127);
 }
 .label-color.b {
     background-color: #ff9046;
@@ -1040,6 +1065,10 @@ footer {
         justify-content: start;
         gap:.5rem;
         padding-block: 1.5rem;
+    }
+
+    main {
+        margin-block: 4rem 6rem;
     }
 }
 
