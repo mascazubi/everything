@@ -894,13 +894,18 @@ body:has(#planets-label:hover) #planets  {
 }
 #earth:hover,
 #earth-label:hover,
-body:has(#earth:hover) #earth-label {
+body:has(#earth:hover) #earth-label,
+#earth:focus,
+#earth-label:focus,
+body:has(#earth:focus) #earth-label{
     color: white;
     font-weight: bolder;
     background-color: var(--shape-hover-color);
 }
 #earth:hover,
-body:has(#earth-label:hover) #earth  {
+body:has(#earth-label:hover) #earth,
+#earth:focus,
+body:has(#earth-label:focus) #earth  {
     border-color: var(--shape-hover-color);
     border-radius: 50%;
 }
