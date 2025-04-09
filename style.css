@@ -320,7 +320,7 @@ body:has(#sub-plank-label:hover) #sub-plank {
 }
 #qgp-label {
     top: 65.5%;
-    left: 30%;
+    left: 30.5%;
     transform: rotate(-59deg);
     font-size: 1rem;
     text-align: center;
@@ -861,7 +861,7 @@ body:has(#moonsdp-label:hover) #moonsdp {
     stroke-width: 0.75;
 }
 #planets-label {
-    top: 31%;
+    top: 30%;
     left: 53.75%;
     font-size: 1rem;
     text-align: center;
@@ -876,6 +876,37 @@ body:has(#planets-label:hover) #planets  {
     color: white;
     font-weight: bolder;
     background-color: var(--shape-hover-color);
+}
+#earth {
+    position: absolute;
+    top: 32%;
+    left: 51%;
+    font-size: 4px;
+    line-height: 5px;
+    display: block;
+    text-align: center;
+    border: 6px solid transparent;
+    border-radius: 50%;
+    font-family: sans-serif;
+}
+#earth-label {
+    top: 32.5%;
+    left: 52.5%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#earth:hover,
+#earth-label:hover,
+body:has(#earth:hover) #earth-label {
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#earth:hover,
+body:has(#earth-label:hover) #earth  {
+    border-color: var(--shape-hover-color);
+    border-radius: 50%;
 }
 #mss {
     fill: rgba(0, 97, 224, 0.5);
