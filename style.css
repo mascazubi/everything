@@ -56,6 +56,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1vh;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
@@ -72,37 +73,39 @@ a{
     scrollbar-gutter: stable;
     display: flex;
     justify-content: start;
-    padding-bottom: 0.75rem;
     align-items: start;
+    height: 100%;
+}
+.idkwtf {
+    min-height: 800px;
+    min-width: 800px;
+    display: flex;
+    align-items: center;
+    margin: 4rem auto;
+    padding: 1rem 1rem;
 }
 main {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    aspect-ratio: 16 / 9;
     margin-inline: auto;
-    margin-block: 4rem;
-    align-items: stretch;
-    width: 110vh;
-    min-width: 66rem;
+    padding-block: 0;
 }
 /* chart - axis adapted from ArturArsalanov's ruler */
 
 .chart.column {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
 }
 .chart-area {
     position: relative;
     background-color: var(--secondary-color);
-    /* height: 55vh;
-    min-height: 600px; */
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    max-width: 48rem;
+    min-width: 42rem;
     border: 2px solid var(--text-color);
     --transition-speed: 0.5s;
+    aspect-ratio: 1 / 1;
 }
 .axis.x {
     position: relative;
@@ -144,6 +147,9 @@ main {
 }
 .axis-wrapper {
     position: relative;
+}
+.axis-wrapper.y {
+    margin-block: 14px;
 }
 .axis-wrapper.y.right {
     margin-right: 5rem;
@@ -190,8 +196,7 @@ main {
 }
 .axis.y {
     position: relative;
-    height: calc(100% - (2 * var(--axis-width)));
-    margin-block: 14px;
+    height: 100%;
     margin-inline: 0;
     width: var(--axis-width);
     display: flex;
@@ -839,8 +844,8 @@ body:has(#atoms-label:hover) #atoms {
     stroke-width: 0.75;
 }
 #moonsdp-label {
-    top: 41%;
-    left: 49.5%;
+    top: 40%;
+    left: 50%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -1049,7 +1054,6 @@ footer {
         text-align: center;
         font-size: 1rem;
     }
-
     .drawer-handle {
         width: 100%;
         text-align: center;
@@ -1086,20 +1090,17 @@ footer {
     body:has(#drawer-toggle:checked) footer {
         transform: translateY(0%);
     }
-
     #drawer-toggle:checked ~ .drawer-handle .chevron {
         transform: rotate(180deg);
         stroke: currentColor;
     }
-
     body {
         justify-content: start;
         gap:.5rem;
         padding-block: 1.5rem;
     }
-
-    main {
-        margin-block: 4rem 6rem;
+    .main-wrapper {
+        margin-bottom: 4rem;
     }
 }
 
