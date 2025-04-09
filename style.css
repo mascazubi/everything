@@ -77,12 +77,14 @@ a{
     height: 100%;
 }
 .idkwtf {
-    min-height: 800px;
-    min-width: 800px;
+    min-height: 769px;
+    min-width: 769px;
     display: flex;
     align-items: center;
-    margin: 4rem auto;
+    justify-content: center;
+    margin: 0 auto;
     padding: 1rem 1rem;
+    height: 100%;
 }
 main {
     display: flex;
@@ -100,9 +102,9 @@ main {
 .chart-area {
     position: relative;
     background-color: var(--secondary-color);
-    width: 50vw;
-    max-width: 48rem;
-    min-width: 42rem;
+    width: 60vh;
+    max-width: 69rem;
+    min-width: 40rem;
     border: 2px solid var(--text-color);
     --transition-speed: 0.5s;
     aspect-ratio: 1 / 1;
@@ -1100,7 +1102,7 @@ footer {
         padding-block: 1.5rem;
     }
     .main-wrapper {
-        margin-bottom: 4rem;
+        margin-bottom: 0;
     }
 }
 
