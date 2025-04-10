@@ -7,6 +7,10 @@
     --link-hover-color: #0056b3;
     --axis-width: 14px;
     --shape-hover-color: #3605d6;
+    --dom-a:#7f7f7f;
+    --dom-b:#ff9046;
+    --dom-c:#7599ff;
+    --dom-d: var(--secondary-color);
 }
 
 /* CSS Reset */
@@ -188,10 +192,10 @@ main {
     width: 100%;
 }
 .axis-title.y.left {
-    left: -8rem;
+    left: -6.5rem;
 }
 .axis-title.y.left.log-mo {
-    left: -5rem;
+    left: -4rem;
 }
 .axis-title.y.right {
     right: 0;
@@ -211,6 +215,7 @@ main {
 }
 .axis.y.left {
     align-items: end;
+    width: 2.5rem;
 }
 .axis.y.right {
     align-items: start;
@@ -237,7 +242,7 @@ main {
 }
 .axis.y.left.log-mo {
     border-right: 2px solid var(--text-color);
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 .chart .axis.y.log-mass-g,
 .chart .axis.y.log-mass-gev {
@@ -381,7 +386,7 @@ body:has(#sub-plank-label:hover) #sub-plank {
     --stroke-width: 0.25;
 }
 #bigboi {
-    fill: rgb(255 179 179);
+    fill: var(--dom-b);
 }
 #oai {
     fill: rgb(127, 127, 127);
@@ -1107,16 +1112,16 @@ body:has(#redg-label:hover) #redg  {
     line-height: 1.2;
 }
 .label-color.a {
-    background-color: rgb(127, 127, 127);
+    background-color: var(--dom-a);
 }
 .label-color.b {
-    background-color: #ff9046;
+    background-color: var(--dom-b);
 }
 .label-color.c {
-    background-color: rgb(117, 153, 255);
+    background-color: var(--dom-c);
 }
 .label-color.d {
-    background-color: var(--secondary-color);
+    background-color: var(--dom-d)
 }
 footer {
     display: flex;
