@@ -78,6 +78,8 @@ a{
     display: flex;
     justify-content: start;
     align-items: start;
+    height: 100%;
+    padding: 0.25rem;
 }
 .idkwtf {
     min-height: 806px;
