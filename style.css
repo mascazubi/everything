@@ -879,18 +879,22 @@ body:has(#planets-label:hover) #planets  {
 #earth {
     position: absolute;
     top: 32%;
-    left: 51%;
+    left: 50.5%;
     font-size: 4px;
-    line-height: 5px;
+    line-height: 1.1;
     display: block;
     text-align: center;
     border: 6px solid transparent;
     border-radius: 50%;
     font-family: sans-serif;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #earth-label {
     top: 32.5%;
-    left: 53%;
+    left: 53.5%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -900,7 +904,7 @@ body:has(#planets-label:hover) #planets  {
 body:has(#earth:hover) #earth-label,
 #earth:focus,
 #earth-label:focus,
-body:has(#earth:focus) #earth-label{
+body:has(#earth:focus) #earth-label {
     color: white;
     font-weight: bolder;
     background-color: var(--shape-hover-color);
@@ -910,7 +914,7 @@ body:has(#earth-label:hover) #earth,
 #earth:focus,
 body:has(#earth-label:focus) #earth  {
     border-color: var(--shape-hover-color);
-    border-radius: 50%;
+    background-color: var(--shape-hover-color);
 }
 #mss {
     fill: rgba(0, 97, 224, 0.5);
