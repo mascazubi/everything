@@ -248,6 +248,51 @@ main {
     height: calc(100% + 2 * var(--axis-width));
     width: 100%;
 }
+
+/* labels on axis */
+#mp-label::after {
+    content: 'm\209A';
+    position: absolute;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+    transform: translateX(-50%);
+    left: -40px;
+    color: white;
+    top: -12px;
+}
+.arrows-mass-g {
+    --arrow-color:white;
+    --arrow-hover-color: red;
+    --arrow-width: 6;
+
+    position: absolute;
+    left: 27.5%;
+    width: 28px;
+    height: 100%;
+    bottom: 0;
+    z-index: 99;
+}
+.arrow {
+    stroke: var(--arrow-color);
+    stroke-width: var(--arrow-width);
+}
+.arrow:hover,
+.arrow:hover ~ defs>#arrowhead {
+    stroke: var(--arrow-hover-color);
+    fill: var(--arrow-hover-color);
+}
+#arrowhead {
+    fill:var(--arrow-color);
+}
+
+#mp:hover,
+#qgp-label:hover,
+body:has(#qgp:hover) #qgp-label,
+body:has(#qgp-label:hover) #qgp {
+
+}
+
 /* inside the chart */
 .shape {
     position: absolute;
@@ -275,6 +320,21 @@ main {
 }
 .dashed {
     stroke-dasharray: var(--dash-array);
+}
+.emoji {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.1;
+    font-family: sans-serif;
+    font-size: 10px;
+    text-align: center;
+    background-color: transparent;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    transform-origin: center;
 }
 .shape-label {
     position: absolute;
@@ -321,7 +381,7 @@ body:has(#sub-plank-label:hover) #sub-plank {
     --stroke-width: 0.25;
 }
 #bigboi {
-    fill: rgb(255 72 0 / 27%);
+    fill: rgb(255 179 179);
 }
 #oai {
     fill: rgb(127, 127, 127);
@@ -676,8 +736,8 @@ body:has(#threekbh-label:hover) #threekbh circle {
     left: 70%;
 }
 #hubble-label {
-    top: 7.6%;
-    left: 74%;
+    top: 8%;
+    left: 74.75%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -692,52 +752,61 @@ body:has(#hubble-label:hover) #hubble circle {
     font-weight: bolder;
     background-color: var(--shape-hover-color);
 }
+
 #human {
-    fill: var(--background-color);
-    stroke: transparent;
-    stroke-width: 16;
-    top: 50%;
-    left: 41.5%;
+    top: 51%;
+    left: 42.5%;
 }
 #human-label {
-    top: 50.5%;
-    left: 45%;
+    top: 51%;
+    left: 45.75%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
 }
-#human circle:hover,
+#human:hover,
 #human-label:hover,
-body:has(#human circle:hover) #human-label,
-body:has(#human-label:hover) #human circle {
-    stroke: var(--shape-hover-color);
-    fill: white;
+body:has(#human:hover) #human-label,
+#human:focus,
+#human-label:focus,
+body:has(#human:focus) #human-label {
     color: white;
     font-weight: bolder;
     background-color: var(--shape-hover-color);
 }
+#human:hover,
+body:has(#human-label:hover) #human,
+#human:focus,
+body:has(#human-label:focus) #human  {
+    border-color: var(--shape-hover-color);
+    background-color: var(--shape-hover-color);
+}
 #whale {
-    fill: var(--background-color);
-    stroke: transparent;
-    stroke-width: 16;
-    top: 47%;
-    left: 42.7%;
+    top: 47.25%;
+    left: 44%;
 }
 #whale-label {
     top: 47.5%;
-    left: 46%;
+    left: 47.2%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
 }
-#whale circle:hover,
+#whale:hover,
 #whale-label:hover,
-body:has(#whale circle:hover) #whale-label,
-body:has(#whale-label:hover) #whale circle {
-    stroke: var(--shape-hover-color);
-    fill: white;
+body:has(#whale:hover) #whale-label,
+#whale:focus,
+#whale-label:focus,
+body:has(#whale:focus) #whale-label {
     color: white;
     font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#whale:hover,
+body:has(#whale-label:hover) #whale,
+#whale:focus,
+body:has(#whale-label:focus) #whale  {
+    border-color: var(--shape-hover-color);
     background-color: var(--shape-hover-color);
 }
 #flea {
@@ -748,8 +817,8 @@ body:has(#whale-label:hover) #whale circle {
     left: 39.2%;
 }
 #flea-label {
-    top: 56%;
-    left: 42.5%;
+    top: 56.5%;
+    left: 43%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -765,27 +834,31 @@ body:has(#flea-label:hover) #flea circle {
     background-color: var(--shape-hover-color);
 }
 #bacterium {
-    fill: var(--background-color);
-    stroke: transparent;
-    stroke-width: 16;
-    top: 63.5%;
-    left: 35.7%;
+    top: 64.25%;
+    left: 36.75%;
 }
 #bacterium-label {
-    top: 64%;
-    left: 39%;
+    top: 64.5%;
+    left: 40%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
 }
-#bacterium circle:hover,
+#bacterium:hover,
 #bacterium-label:hover,
-body:has(#bacterium circle:hover) #bacterium-label,
-body:has(#bacterium-label:hover) #bacterium circle {
-    stroke: var(--shape-hover-color);
-    fill: white;
+body:has(#bacterium:hover) #bacterium-label,
+#bacterium:focus,
+#bacterium-label:focus,
+body:has(#bacterium:focus) #bacterium-label {
     color: white;
     font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#bacterium:hover,
+body:has(#bacterium-label:hover) #bacterium,
+#bacterium:focus,
+body:has(#bacterium-label:focus) #bacterium  {
+    border-color: var(--shape-hover-color);
     background-color: var(--shape-hover-color);
 }
 #covid {
@@ -797,7 +870,7 @@ body:has(#bacterium-label:hover) #bacterium circle {
 }
 #covid-label {
     top: 67%;
-    left: 38.2%;
+    left: 38.75%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -819,7 +892,7 @@ body:has(#covid-label:hover) #covid circle {
 }
 #atoms-label {
     top: 73%;
-    left: 35.2%;
+    left: 35.75%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -879,20 +952,8 @@ body:has(#planets-label:hover) #planets  {
     background-color: var(--shape-hover-color);
 }
 #earth {
-    position: absolute;
     top: 32%;
-    left: 50.5%;
-    font-size: 4px;
-    line-height: 1.1;
-    display: block;
-    text-align: center;
-    border: 6px solid transparent;
-    border-radius: 50%;
-    font-family: sans-serif;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    left: 50.25%;
 }
 #earth-label {
     top: 32.5%;
@@ -924,8 +985,8 @@ body:has(#earth-label:focus) #earth  {
     stroke-width: 0.75;
 }
 #mss-label {
-    top: 27%;
-    left: 55.75%;
+    top: 24%;
+    left: 56%;
     font-size: 1rem;
     text-align: center;
     color: var(--background-color);
@@ -938,6 +999,34 @@ body:has(#mss-label:hover) #mss  {
     fill: white;
     color: white;
     font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#sun {
+    top: 27%;
+    left: 52.5%;
+}
+#sun-label {
+    top: 27.5%;
+    left: 55.75%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+#sun:hover,
+#sun-label:hover,
+body:has(#sun:hover) #sun-label,
+#sun:focus,
+#sun-label:focus,
+body:has(#sun:focus) #sun-label {
+    color: white;
+    font-weight: bolder;
+    background-color: var(--shape-hover-color);
+}
+#sun:hover,
+body:has(#sun-label:hover) #sun,
+#sun:focus,
+body:has(#sun-label:focus) #sun  {
+    border-color: var(--shape-hover-color);
     background-color: var(--shape-hover-color);
 }
 #galaxies {

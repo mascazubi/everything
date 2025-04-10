@@ -16,9 +16,19 @@
     <div class="main-wrapper">
         <div class="idkwtf">
             <main>
+                <svg class="arrows-mass-g" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    
+                    <line id="mp" x1="0" y1="200" x2="100" y2="200" class="arrow" marker-end="url(#arrowhead)" />
+
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" />
+                        </marker>
+                    </defs>
+                </svg>
                 <div class="axis-wrapper y left">
                     <div class="axis-title y left log-mo">
-                        <p>log(M<sub>⊙</sub>)</p>
+                        <p>log (M<sub>⊙</sub>)</p>
                     </div>
                     <div class="axis log-mo y left">
                         <div class="minor"></div>
@@ -127,7 +137,7 @@
                         <div class="minor"></div>
                         <div class="major" data-value="0"></div>
                         <div class="minor"></div>
-                        <div class="minor"></div>
+                        <div id="mp-label" class="minor "></div>
                         <div class="minor"></div>
                         <div class="minor"></div>
                         <div class="major" data-value="-10"></div>
@@ -258,18 +268,12 @@
                             <svg id="hubble" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
                                 <circle cx="50%" cy="50%" r="30px"></circle>
                             </svg>
-                            <svg id="human" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
-                                <circle cx="50%" cy="50%" r="15px"></circle>
-                            </svg>
-                            <svg id="whale" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
-                                <circle cx="50%" cy="50%" r="15px"></circle>
-                            </svg>
+                            <span id="human" class="emoji">🫵</span>
+                            <span id="whale" class="emoji">🐳</span>
                             <svg id="flea" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
                                 <circle cx="50%" cy="50%" r="15px"></circle>
                             </svg>
-                            <svg id="bacterium" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
-                                <circle cx="50%" cy="50%" r="15px"></circle>
-                            </svg>
+                            <span id="bacterium" class="emoji">🦠</span>
                             <svg id="covid" class="circle" viewBox="0 0 100 100" width="5%" height="5%" preserveAspectRatio="xMidYMid meet">
                                 <circle cx="50%" cy="50%" r="15px"></circle>
                             </svg>
@@ -277,6 +281,7 @@
                                 <circle cx="50%" cy="50%" r="20px"></circle>
                             </svg>
                             <span id="earth" class="emoji">🌎</span>
+                            <span id="sun" class="emoji">☀️</span>
             
                             <!-- labels -->
                             <label tabindex="1" id="qg-label" for="qg" class="shape-label light-label">QG</label>
@@ -306,7 +311,8 @@
                             <label tabindex="1" id="planets-label" for="planets" class="shape-label dark-label">planets</label>
                             <label tabindex="1" id="earth-label" for="earth" class="shape-label dark-label">earth</label>
                             <label tabindex="1" id="mss-label" for="mss" class="shape-label dark-label">main sequence stars</label>
-            
+                            <label tabindex="1" id="sun-label" for="sun" class="shape-label dark-label">sun</label>
+
                             <label tabindex="1" id="galaxies-label" for="galaxies" class="shape-label dark-label">galaxies</label>
                             <label tabindex="1" id="qgp-label" for="qgp" class="shape-label dark-label">QGP</label>
                             <!-- legend -->
